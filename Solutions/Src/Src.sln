@@ -1,8 +1,38 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "通用类库 Libraries", "通用类库 Libraries", "{5C420062-5011-46C5-8D0F-75632831DE68}"
+	ProjectSection(SolutionItems) = preProject
+		Library Common Files\AssemblyInfoCommon.cs = Library Common Files\AssemblyInfoCommon.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "工具集 Toolkits", "工具集 Toolkits", "{F4D82C39-CEE5-4234-8DDA-0CD9D68F346E}"
+	ProjectSection(SolutionItems) = preProject
+		Toolkits Common Files\AssemblyInfoCommon.cs = Toolkits Common Files\AssemblyInfoCommon.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "在线测评 EvaOnline", "在线测评 EvaOnline", "{8CE21C8F-C82B-45E6-83CA-00C1535B9D02}"
+	ProjectSection(SolutionItems) = preProject
+		EvaOnline Common Files\AssemblyInfoCommon.cs = EvaOnline Common Files\AssemblyInfoCommon.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.VersionBuilder", "Tools.VersionBuilder\Tools.VersionBuilder.csproj", "{C5DB1007-B62F-49AC-BDDF-9623652F3ABF}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5DB1007-B62F-49AC-BDDF-9623652F3ABF}.Debug|x86.ActiveCfg = Debug|x86
+		{C5DB1007-B62F-49AC-BDDF-9623652F3ABF}.Debug|x86.Build.0 = Debug|x86
+		{C5DB1007-B62F-49AC-BDDF-9623652F3ABF}.Release|x86.ActiveCfg = Release|x86
+		{C5DB1007-B62F-49AC-BDDF-9623652F3ABF}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5DB1007-B62F-49AC-BDDF-9623652F3ABF} = {F4D82C39-CEE5-4234-8DDA-0CD9D68F346E}
 	EndGlobalSection
 EndGlobal
