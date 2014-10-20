@@ -57,6 +57,7 @@ namespace SourceproStudio.Csharp.Practices.Library
         /// </para>
         /// </returns>
         /// <example>
+        /// <code>
         /// using System;
         /// using SourceproStudio.Csharp.Practices.Library;
         /// 
@@ -89,7 +90,8 @@ namespace SourceproStudio.Csharp.Practices.Library
         ///             Console.WriteLine(me.Name);
         ///         }
         ///     }
-        /// }
+        /// }        
+        /// </code>
         /// </example>
         static public bool BaseOn(this Type me, Type target, bool nullValue = true)
         {
@@ -121,6 +123,8 @@ namespace SourceproStudio.Csharp.Practices.Library
             return isInherited;
         }
         #endregion
+
+
     }
 }
 

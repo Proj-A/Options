@@ -48,6 +48,7 @@ namespace SourceproStudio.Csharp.Practices.Library
         /// <param name="me"><see cref="object"/>对象实例。</param>
         /// <returns>如果<paramref name="me"/>为null值，则返回true；否则返回false。</returns>
         /// <example>
+        /// <code>
         /// using System;
         /// using SourceproStudio.Csharp.Practices.Library;
         /// 
@@ -60,7 +61,8 @@ namespace SourceproStudio.Csharp.Practices.Library
         ///             Console.WriteLine("Startup argument array is not empty!");
         ///         }
         ///     }
-        /// }
+        /// }       
+        /// </code>
         /// </example>
         static public bool Nothing(this object me)
         {
@@ -75,6 +77,7 @@ namespace SourceproStudio.Csharp.Practices.Library
         /// <param name="me"><see cref="object"/>对象实例。</param>
         /// <returns>如果<paramref name="me"/>为null值，则返回false；否则返回true。</returns>
         /// <example>
+        /// <code>
         /// using System;
         /// using SourceproStudio.Csharp.Practices.Library;
         /// 
@@ -88,6 +91,7 @@ namespace SourceproStudio.Csharp.Practices.Library
         ///         }
         ///     }
         /// }
+        /// </code>
         /// </example>
         static public bool NotNothing(this object me)
         {
@@ -111,6 +115,7 @@ namespace SourceproStudio.Csharp.Practices.Library
         /// </para>
         /// </returns>
         /// <example>
+        /// <code>
         /// using System;
         /// using SourceproStudio.Csharp.Practices.Library;
         /// 
@@ -125,6 +130,7 @@ namespace SourceproStudio.Csharp.Practices.Library
         ///         }
         ///     }
         /// }
+        /// </code>
         /// </example>
         static public bool Is<T>(this object me, bool nullValue = true)
         {
@@ -153,6 +159,7 @@ namespace SourceproStudio.Csharp.Practices.Library
         /// 当<paramref name="me"/>不为null，且不是<typeparamref name="T"/>类型或其派生类型，则抛出此异常。
         /// </exception>
         /// <example>
+        /// <code>
         /// using System;
         /// using SourceproStudio.Csharp.Practices.Library;
         /// 
@@ -165,6 +172,7 @@ namespace SourceproStudio.Csharp.Practices.Library
         ///         string s = obj.To&lt;string&gt;();
         ///     }
         /// }
+        /// </code>
         /// </example>
         static public T To<T>(this object me)
         {
