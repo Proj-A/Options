@@ -124,7 +124,96 @@ namespace SourceproStudio.Csharp.Practices.Library
         }
         #endregion
 
+        #region GetCustomAttributes
+        /// <summary>
+        /// 获取类型<paramref name="me"/>所罕有的<typeparamref name="T"/>类型的<see cref="Attribute"/>对象实例数组。
+        /// </summary>
+        /// <typeparam name="T">派生自<see cref="Attribute"/>的类型。</typeparam>
+        /// <param name="me"><see cref="Type"/>对象实例。</param>
+        /// <returns><typeparamref name="T"/>类型的<see cref="Attribute"/>对象实例数组。</returns>
+        /// <exception cref="NullReferenceException">
+        /// 当<paramref name="me"/>为null值时抛出此异常。
+        /// </exception>
+        /// <example>
+        /// <code>
+        /// using System;
+        /// using SourceproStudio.Csharp.Practices.Library;
+        /// 
+        /// [<see cref="SerializableAttribute"/>]
+        /// class Person
+        /// {
+        ///     string name = string.Empty;
+        ///     
+        ///     public string Name
+        ///     {
+        ///         get { return this.name; }
+        ///         set { this.name = value; }
+        ///     }
+        /// }
+        /// 
+        /// class Program
+        /// {
+        ///     static void Main(string[] args)
+        ///     {
+        ///         Person p = new Person() { Name = "Wang Yucai" };
+        ///         Attribute[] attr = p.GetType().GetAttributes&lt;SerializableAttribute&gt;();
+        ///     }
+        /// }
+        /// </code>
+        /// </example>
+        static public Attribute[] GetCustomAttributes<T>(this Type me)
+            where T : Attribute
+        {
+            if (me.Nothing())
+                throw new NullReferenceException();
+            return Attribute.GetCustomAttributes(me, typeof(T));
+        }
+        #endregion
 
+        #region GetCustomAttribute
+        /// <summary>
+        /// 获取类型<paramref name="me"/>所罕有的<typeparamref name="T"/>类型的<see cref="Attribute"/>对象实例。
+        /// </summary>
+        /// <typeparam name="T">派生自<see cref="Attribute"/>的类型。</typeparam>
+        /// <param name="me"><see cref="Type"/>对象实例。</param>
+        /// <returns><typeparamref name="T"/>类型的<see cref="Attribute"/>对象实例。</returns>
+        /// <exception cref="NullReferenceException">
+        /// 当<paramref name="me"/>为null值时抛出此异常。
+        /// </exception>
+        /// <example>
+        /// <code>
+        /// using System;
+        /// using SourceproStudio.Csharp.Practices.Library;
+        /// 
+        /// [<see cref="SerializableAttribute"/>]
+        /// class Person
+        /// {
+        ///     string name = string.Empty;
+        ///     
+        ///     public string Name
+        ///     {
+        ///         get { return this.name; }
+        ///         set { this.name = value; }
+        ///     }
+        /// }
+        /// 
+        /// class Program
+        /// {
+        ///     static void Main(string[] args)
+        ///     {
+        ///         Person p = new Person() { Name = "Wang Yucai" };
+        ///         Attribute attr = p.GetType().GetAttribute&lt;SerializableAttribute&gt;();
+        ///     }
+        /// }
+        /// </code>
+        /// </example>
+        static public Attribute GetCustomAttribute<T>(this Type me)
+            where T : Attribute
+        {
+            if (me.Nothing()) throw new NullReferenceException();
+            return Attribute.GetCustomAttribute(me, typeof(T));
+        }
+        #endregion
     }
 }
 
