@@ -42,11 +42,16 @@
             this.CtrlCopytoClipboard = new System.Windows.Forms.Button();
             this.CtrlRewriteCSFile = new System.Windows.Forms.Button();
             this.CtrlOpenCSFile = new System.Windows.Forms.OpenFileDialog();
+            this.CtrlUpdateFileVersion = new System.Windows.Forms.CheckBox();
+            this.CtrlAppStatusBar = new System.Windows.Forms.StatusStrip();
+            this.CtrlAppVersionDisplayLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.CtrlLogViewer = new System.Windows.Forms.RichTextBox();
             this.CtrlVersionControlGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CtrlBuildVersionValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CtrlInnerVersionValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CtrlMinorVersionValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CtrlMajorVersionValue)).BeginInit();
+            this.CtrlAppStatusBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // CtrlVersionControlGroup
@@ -200,6 +205,7 @@
             this.CtrlRewriteCSFile.TabIndex = 1;
             this.CtrlRewriteCSFile.Text = "更新到.cs文件";
             this.CtrlRewriteCSFile.UseVisualStyleBackColor = true;
+            this.CtrlRewriteCSFile.Click += new System.EventHandler(this.HandleRewriteCSFileButtonClickEvent);
             // 
             // CtrlOpenCSFile
             // 
@@ -211,12 +217,57 @@
             this.CtrlOpenCSFile.SupportMultiDottedExtensions = true;
             this.CtrlOpenCSFile.Title = "打开指定的C#代码文件";
             // 
+            // CtrlUpdateFileVersion
+            // 
+            this.CtrlUpdateFileVersion.AutoSize = true;
+            this.CtrlUpdateFileVersion.Checked = true;
+            this.CtrlUpdateFileVersion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CtrlUpdateFileVersion.Location = new System.Drawing.Point(238, 131);
+            this.CtrlUpdateFileVersion.Name = "CtrlUpdateFileVersion";
+            this.CtrlUpdateFileVersion.Size = new System.Drawing.Size(196, 24);
+            this.CtrlUpdateFileVersion.TabIndex = 2;
+            this.CtrlUpdateFileVersion.Text = "同时更新程序集文件版本号";
+            this.CtrlUpdateFileVersion.UseVisualStyleBackColor = true;
+            // 
+            // CtrlAppStatusBar
+            // 
+            this.CtrlAppStatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CtrlAppVersionDisplayLabel});
+            this.CtrlAppStatusBar.Location = new System.Drawing.Point(0, 304);
+            this.CtrlAppStatusBar.Name = "CtrlAppStatusBar";
+            this.CtrlAppStatusBar.Size = new System.Drawing.Size(702, 22);
+            this.CtrlAppStatusBar.TabIndex = 3;
+            // 
+            // CtrlAppVersionDisplayLabel
+            // 
+            this.CtrlAppVersionDisplayLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.CtrlAppVersionDisplayLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.CtrlAppVersionDisplayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CtrlAppVersionDisplayLabel.Name = "CtrlAppVersionDisplayLabel";
+            this.CtrlAppVersionDisplayLabel.Size = new System.Drawing.Size(131, 17);
+            this.CtrlAppVersionDisplayLabel.Text = "toolStripStatusLabel1";
+            // 
+            // CtrlLogViewer
+            // 
+            this.CtrlLogViewer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CtrlLogViewer.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CtrlLogViewer.ForeColor = System.Drawing.Color.Black;
+            this.CtrlLogViewer.Location = new System.Drawing.Point(17, 174);
+            this.CtrlLogViewer.Name = "CtrlLogViewer";
+            this.CtrlLogViewer.ReadOnly = true;
+            this.CtrlLogViewer.Size = new System.Drawing.Size(665, 114);
+            this.CtrlLogViewer.TabIndex = 4;
+            this.CtrlLogViewer.Text = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(702, 170);
+            this.ClientSize = new System.Drawing.Size(702, 326);
+            this.Controls.Add(this.CtrlLogViewer);
+            this.Controls.Add(this.CtrlAppStatusBar);
+            this.Controls.Add(this.CtrlUpdateFileVersion);
             this.Controls.Add(this.CtrlRewriteCSFile);
             this.Controls.Add(this.CtrlCopytoClipboard);
             this.Controls.Add(this.CtrlVersionControlGroup);
@@ -235,7 +286,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.CtrlInnerVersionValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CtrlMinorVersionValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CtrlMajorVersionValue)).EndInit();
+            this.CtrlAppStatusBar.ResumeLayout(false);
+            this.CtrlAppStatusBar.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -255,6 +309,10 @@
         private System.Windows.Forms.Button CtrlCopytoClipboard;
         private System.Windows.Forms.Button CtrlRewriteCSFile;
         private System.Windows.Forms.OpenFileDialog CtrlOpenCSFile;
+        private System.Windows.Forms.CheckBox CtrlUpdateFileVersion;
+        private System.Windows.Forms.StatusStrip CtrlAppStatusBar;
+        private System.Windows.Forms.ToolStripStatusLabel CtrlAppVersionDisplayLabel;
+        private System.Windows.Forms.RichTextBox CtrlLogViewer;
 
     }
 }
