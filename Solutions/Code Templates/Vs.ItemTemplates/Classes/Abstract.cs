@@ -30,7 +30,7 @@ namespace $rootnamespace$
     /// 命名空间：<see cref="$rootnamespace$"/>
     /// </para>
     /// <para>
-    /// 适用的.NET Framework版本：<see cref="$targetframeworkversion$"/>
+    /// 适用的.NET Framework版本：$targetframeworkversion$
     /// </para>
     /// </summary>
     /// <remarks>

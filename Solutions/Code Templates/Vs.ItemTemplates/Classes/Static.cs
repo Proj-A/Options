@@ -1,4 +1,4 @@
-#region ------------------------------------------------Header Description-------------------------------------------------------------
+﻿#region ------------------------------------------------Header Description-------------------------------------------------------------
 
 /*
  * .NET Programmer's Name : Wang Yucai
@@ -36,8 +36,7 @@ namespace $rootnamespace$
     /// <remarks>
     /// 此类型适用于$targetframeworkversion$及其以上版本的.NET Framework。
     /// </remarks>
-    [Serializable]
-    public enum $safeitemname$
+    public static class $safeitemname$
     {
     }
 }

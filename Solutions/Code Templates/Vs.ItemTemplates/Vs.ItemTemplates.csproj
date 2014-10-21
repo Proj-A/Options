@@ -43,6 +43,7 @@
     <Compile Include="Classes\Abstract.cs" />
     <Compile Include="Classes\Normal.cs" />
     <Compile Include="Classes\Sealed.cs" />
+    <Compile Include="Classes\Static.cs" />
     <Compile Include="Delegate.cs" />
     <Compile Include="Enumeration.cs" />
     <Compile Include="Interface.cs" />
